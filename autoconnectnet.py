@@ -11,6 +11,7 @@ import time
 
 #下面的地址是在docs.seleniumhq.org/download/ 下载了火狐浏览器的webdriver之后解压存放exe的地址
 #我想你也可以使用chrome浏览器,即使用chromewebdriver（然后"稍微"debug一下下）
+#稍等一下window自动解析宽带或连到WiFi
 time.sleep(3)
 #.log文件是不考虑自启动python运行调通一次后生成在.py同目录的文件
 driver = webdriver.Firefox(executable_path = 'I:\Downloads\geckodriver-v0.24.0-win64\geckodriver.exe',log_path=r"E:\geckodriver.log")
@@ -24,6 +25,7 @@ driver.find_element_by_id("pwd").send_keys("233333")#密码
 driver.find_element_by_id("selectDisname").click()
 driver.find_element_by_id("_service_0").click()
 driver.find_element_by_id("loginLink_div").click()
+#sleep是为了好玩(?) 你完全可以我觉得完全可以删掉
 time.sleep(1)
 driver.close()
 #调通之后，设置开机自启,如下两步走
