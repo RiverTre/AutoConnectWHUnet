@@ -1,0 +1,1 @@
+python E:\autoconnectnet.py
